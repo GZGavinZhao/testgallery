@@ -1,0 +1,24 @@
+name: testgallery
+description: A web app that uses AngularDart Components
+# version: 0.0.``
+# homepage: https://www.example.com
+
+environment:
+  sdk: '>=2.10.0 <3.0.0'
+
+dependencies:
+  angular: ^7.0.2
+  angular_components:
+    git:
+      url: https://github.com/angulardart-community/angular_components
+      path: angular_components
+      ref: compatible
+
+dev_dependencies:
+  angular_test: ^4.0.1
+  build_runner: ^2.1.4
+  build_test: ^2.1.4
+  build_web_compilers: ^3.2.1
+  meta: ^1.7.0 # As of 07/12/2021, Dart throws errors if meta is 1.7.0 or above
+  pedantic: ^1.9.0
+  test: ^1.6.3
