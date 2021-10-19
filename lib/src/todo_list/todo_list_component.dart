@@ -17,16 +17,20 @@ import 'todo_list_service.dart';
     MaterialFabComponent,
     MaterialIconComponent,
     materialInputDirectives,
+		// MaterialTooltipDirective needs to be added!
     MaterialTooltipDirective,
     NgFor,
     NgIf,
   ],
   providers: [
     ClassProvider(TodoListService),
-		ClassProvider(DomService),
+		// Problem below
 		ClassProvider(DomPopupSourceFactory),
+		ClassProvider(DomService),
 		ClassProvider(DomRuler),
 		ClassProvider(Document),
+		// This will bring you error!
+		ClassProvider(Window),
   ],
 )
 class TodoListComponent implements OnInit {
